@@ -643,7 +643,6 @@ module Miasma
         def sts_update_required?(args={})
           expiry = args.fetch(:aws_sts_token_expires, data[:aws_sts_token_expires])
           expiry.nil? || expiry <= Time.now - 1
-          true
         end
 
         # Simple callback to allow request option adjustments prior to
